@@ -1,0 +1,51 @@
+---
+import Base from '../layout/Base.astro';
+---
+
+<Base
+  title="Joban Mendpara"
+  description="Personal blog and portfolio."
+  class="bg-background"
+>
+  <div class="h-52 block"></div>
+  <div class="max-w-3xl p-4 xl:text-base max-h-fit leading-relaxed md:px-24 min-h-fit flex flex-col justify-around gap-4">
+    <div class="bg-logo"></div>
+    <div class="text-md" x-data="{showDescription:false}">
+      <h1 class="text-3xl text-foreground font-bold text-">Joban Mendpara</h1>
+      <p class="flex items-center gap-3 text-gray-400">
+        Minimalist • Keyboard Enthusiast • Software Developer
+        <span x-on:click="showDescription=!showDescription">
+          <svg class="w-4 h-4" x-show="!showDescription" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 15 15">
+            <path fill="currentColor" fill-rule="evenodd" d="M3.135 6.158a.5.5 0 0 1 .707-.023L7.5 9.565l3.658-3.43a.5.5 0 0 1 .684.73l-4 3.75a.5.5 0 0 1-.684 0l-4-3.75a.5.5 0 0 1-.023-.707Z" clip-rule="evenodd"></path>
+          </svg>
+          <svg class="w-4 h-4" x-show="showDescription" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 15 15" style="display: none;">
+            <path fill="currentColor" fill-rule="evenodd" d="M3.135 8.842a.5.5 0 0 0 .707.023L7.5 5.435l3.658 3.43a.5.5 0 0 0 .684-.73l-4-3.75a.5.5 0 0 0-.684 0l-4 3.75a.5.5 0 0 0-.023.707Z" clip-rule="evenodd"></path>
+          </svg>
+        </span>
+      </p>
+      <p class="max-h-0 overflow-hidden transition-all" x-bind:class="showDescription ? 'mt-5':''" x-ref="descContainer" x-bind:style="showDescription ? 'max-height:' + $refs.descContainer.scrollHeight + 'px':''" style="">
+        I am a professional Developer from Virginia, US with 3 year of experience in Web Development, Internal Tooling,
+        and Workflow Automation. I am passionate about exploring the vast domains of tech in my spare time. I believe in
+        keeping things simple and straightforward. If you need any assistance or have any questions, feel free to reach
+        out to me.
+      </p>
+    </div>
+    <nav class="text-muted mt-3 flex flex-wrap w-fit justify-between items-center">
+      <a class="home-nav-button border border-gray-500 hover:border-gray-200 rounded-tl-md rounded-bl-md p-2 text-gray-400 hover:text-gray-200 hover:no-underline" href="/about">About</a>
+      <a class="home-nav-button border border-gray-500 hover:border-gray-200 p-2 text-gray-400 hover:text-gray-200 hover:no-underline" href="/writing">Writing</a>
+      <a class="home-nav-button border border-gray-500 hover:border-gray-200 p-2 text-gray-400 hover:text-gray-200 hover:no-underline" href="/tools">Tools</a>
+      <a class="home-nav-button border border-gray-500 hover:border-gray-200 p-2 text-gray-400 hover:text-gray-200 hover:no-underline" href="/skills">Skills</a>
+      <a class="home-nav-button border border-gray-500 hover:border-gray-200 rounded-tr-md rounded-br-md p-2 text-gray-400 hover:text-gray-200 hover:no-underline" href="/contact">Contact</a>
+    </nav>
+    <a href="/hire">
+      <div class="text-inherit w-fit px-2 inline-flex items-center gap-2">
+        <div class="flex items-center">
+          <div class="h-2 w-2 bg-green-500 rounded-full items-center inline-flex justify-center">
+            <div class="h-1.5 w-1.5 bg-green-500 blur-sm rounded-full"></div>
+          </div>
+        </div>
+        <p class="text-sm m-0 p-0 text-muted"><small>Available for Hire</small></p>
+      </div>
+    </a>
+  </div>
+</Base>
