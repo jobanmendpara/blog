@@ -3,8 +3,8 @@ import Base from '../layout/Base.astro';
 ---
 
 <Base
-  title="Contact | Joban Mendpara"
-  description="How you can in touch with me"
+  title="Writing | Joban Mendpara"
+  description="What I'm thinking about"
   class="bg-background"
 >
   <div class="h-52 block"></div>
@@ -20,35 +20,8 @@ import Base from '../layout/Base.astro';
       </span>
       Back
     </a>
-    <h2 class="text-3xl text-foreground font-bold">Contact</h2>
+    <h2 class="text-3xl text-foreground font-bold">Writing</h2>
     <hr class="border-t-1 border-primary"/>
-    <p>Online</p>
-    <div class="space-y-0">
-      <p>
-        <a href="mailto:me@joban.dev">
-          me@joban.dev
-        </a>
-      </p>
-      <p>
-        <a href="https://www.x.com/jobanbm" target="_blank">
-          X
-        </a>
-      </p>
-      <p>
-        <a href="https://www.linkedin.com/in/jobanmendpara" target="_blank">
-          LinkedIn
-        </a>
-      </p>
-      <p>
-        <a href="https://www.github.com/jobanmendpara" target="_blank">
-          GitHub
-        </a>
-      </p>
-      <p>
-        <a href="https://www.discordapp.com/users/nullmello" target="_blank">
-          Discord
-        </a>
-      </p>
-    </div>
+    <p>No posts currently. Come back soon!</p>
   </div>
 </Base>
